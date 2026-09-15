@@ -22189,8 +22189,7 @@ So for once, its you who tries to lighten up &lt;i&gt;his&lt;/i&gt; mood.
 
 &lt;&lt;Matt&gt;&gt; &quot;Thanks $playerName, I could really go for a cup before class.&quot; &lt;&lt;/Matt&gt;&gt; Matt grabs his shoes, getting ready to head outside.
 &lt;&lt;if $faceOverlayScore eq 2 || $nailsScore eq 1&gt;&gt;&lt;&lt;Matt&gt;&gt; &quot;I&#39;m uh.. not judging or anything, but you planning on going out like that?&quot; &lt;&lt;/Matt&gt;&gt; Matt looks at you carrying the remnants of Zoey and Claire&#39;s dares. 
-&lt;&lt;elseif&gt;&gt;
-&lt;&lt;if $faceOverlayScore gte 3 || $nailsScore gte 2&gt;&gt;&lt;&lt;Matt&gt;&gt; &quot;I&#39;m uh.. not judging or anything, but you planning on going out like that?&quot; &lt;&lt;/Matt&gt;&gt; Matt notices you used the vanity. 
+&lt;&lt;elseif $faceOverlayScore gte 3 || $nailsScore gte 2&gt;&gt;&lt;&lt;Matt&gt;&gt; &quot;I&#39;m uh.. not judging or anything, but you planning on going out like that?&quot; &lt;&lt;/Matt&gt;&gt; Matt notices you used the vanity. 
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;Matt&gt;&gt; &quot;Let me just grab some things, meet you outside when you&#39;re ready.&quot; &lt;&lt;/Matt&gt;&gt;
 &lt;&lt;/if&gt;&gt;\ 
@@ -22304,13 +22303,13 @@ So for once, its you who tries to lighten up &lt;i&gt;his&lt;/i&gt; mood.
     \
     &lt;&lt;link &quot;Past then Future&quot; &quot;Skip Chapter&quot;&gt;&gt;
       &lt;&lt;set $firstChoice to &quot;past&quot;&gt;&gt;\
-      &lt;&lt;run if (!$ownedAccessories.includes(&quot;images/Accessories-01-Masc-Hat-Trilby.png&quot;)) $ownedAccessories.push(&quot;images/Accessories-01-Masc-Hat-Trilby.png&quot;);&gt;&gt;\
+      &lt;&lt;set $ownedAccessories.push(&quot;images/Accessories-01-Masc-Hat-Trilby.png&quot;)&gt;&gt;\
       &lt;&lt;set $skipFork to true&gt;&gt;\
     &lt;&lt;/link&gt;&gt;\
     \
     &lt;&lt;link &quot;Future then Past&quot; &quot;Skip Chapter&quot;&gt;&gt;
       &lt;&lt;set $firstChoice to &quot;future&quot;&gt;&gt;\
-      &lt;&lt;run if (!$ownedAccessories.includes(&quot;images/Accessories-02-Masc-Wig-Wavybob.png&quot;)) $ownedAccessories.push(&quot;images/Accessories-02-Masc-Wig-Wavybob.png&quot;);&gt;&gt;\
+      &lt;&lt;set $ownedAccessories.push(&quot;images/Accessories-02-Masc-Wig-Wavybob.png&quot;)&gt;&gt;\
       &lt;&lt;set $skipFork to true&gt;&gt;\
 	 &lt;&lt;set $faceOverlayScore to 1&gt;&gt;\
     &lt;&lt;/link&gt;&gt;\
