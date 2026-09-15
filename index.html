@@ -8776,9 +8776,10 @@ function runCanvasHypnoFemmeWarp() {
             var wordDuration = 1 / totalWords; 
             var wordIndex = Math.floor(progress / wordDuration);
             if (wordIndex >= totalWords) wordIndex = totalWords - 1;
+            if (wordIndex < 0) wordIndex = 0; // Safety check
 
             var wordProgress = (progress - (wordIndex * wordDuration)) / wordDuration;
-            var currentWord = words[wordIndex];
+            var currentWord = words[wordIndex] || "RELAX"; // Safety fallback
 
             var popStart = 0.85;
             var isPopping = wordProgress >= popStart;
@@ -8914,6 +8915,9 @@ function runCanvasHypnoFemmeWarp() {
 
     requestAnimationFrame(loop);
 }
+
+
+// Hypnowarp
 
 function runCanvasHypnoWarp() {
     $('#vfx-canvas').remove();
